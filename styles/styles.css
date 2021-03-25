@@ -1,7 +1,7 @@
 body {
     font-family: helvetica;
     background: #FAFAFA;
-    color: #DBDBDB;
+    color: black;
 }
 
 /*------------- TOPO ---------------*/
@@ -17,6 +17,10 @@ body {
     width: 935px;
     height: 54px;
     margin: 0 auto;
+}
+
+.aviao {
+    display: none;
 }
 
 .top {
@@ -76,7 +80,55 @@ body {
     background: #DBDBDB;
     margin-right: 10px;
 }
+/*-----------CONTAINER--------------------*/
 
+.container {
+    display: flex;
+}
+
+.container-right {
+    width: 273px;
+    margin-top: 88px;
+    margin-left: 28px;
+}
+
+.side-bar {
+    
+}
+
+.side-bar-top {
+    margin-top: 32px;
+    display: flex;
+}
+
+.side-bar-top p {
+    margin: 15px 0px 0px 10px
+}
+
+.side-bar-top img{
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+}
+
+.side-bar-body {
+    margin-top: 35px;
+}
+.side-bar-body div{
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.side-bar-body img {
+    width: 32px;
+    height: 32px;
+    border-radius: 28px;
+}
+
+p {
+    font-size: 10px;
+}
 /*-------------- Stories ------------------- */
 
 .stories {
@@ -86,22 +138,32 @@ body {
     margin-left: 215.5px;
     border: 1px solid #DBDBDB;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 3px;
-    
+    overflow: hidden;
+   
 }
 
 .storie img {
     height: 56px;
     width: 56px;
-    border-radius: 50%;
+    border-radius: 50%; 
+    margin-top: 5px; 
+    margin-bottom: 5px; 
 }
 
+
 .storie {
-    margin-left: 15px;
+    width: 66px;
+    height: 66px;
+    margin-left: 10px;
     text-align: center;
+    background-image: url(/images/stories_background.jpg);
+    background-size: cover;  
+    border-radius: 33%;
 }
+
 
 .photo {
     margin-top: 30px;
@@ -130,23 +192,27 @@ body {
 .post-top {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    margin: 10px 10px 10px 15px;
 }
 
-.post-top img {
-    margin-right: 15px;
-}
+
 
 .posts .post .post-top div:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    margin-right: 25px;
 }
+
+
+.post-top p {
+    margin-left: 10px;
+}
+
 
 .post-bottom {
     margin: 10px 15px 0 15px;
-    
     display: flex;
     justify-content: space-between;
 }
@@ -155,13 +221,13 @@ body {
     margin-right: 40px;
 }
 
-.post-top img {
+.post-top img:first-child {
     width: 32px;
     height: 32px;
     border-radius: 50%;
 }
 
-.post-bottom img {
+.post-top img:last-child, .post-bottom img {
     width: 17px;
     height: 17px;
     margin-right: 10px;
@@ -178,27 +244,75 @@ body {
     border-radius: 50%;
 }
 
+/*---------- SIDE BAR ---------------------*/
+
+span {
+    
+    display: inline-block;
+    margin-left: 5px;
+}
+
 /*---------- Breakpoint 935px ---------------*/
 @media (max-width:935px) {
+    .tops {
+        left: 0;
+       width: 100%;
+    }
 
+    .tops .top:first-child{
+        margin-left: 15px;
+    }
 
+  
+    .container {
+        margin-left:auto;
+        margin-right: auto;
+    }
+    .container-right {
+        display: none;
+      
+    }
+
+    .container-left {
+        width: 100%;
+       
+    }
+
+    .tops .top:nth-child(3) img {
+        margin-right: 15px;
+    }
 
 }
 
 
 /*----------- Breakpoint 614px --------------*/
-@media (max-width:634px) {
-    .tops .top:nth-child(1) {
-        margin: 0;
-    }
-    
-    .tops .top:nth-child(2){
+@media (max-width:614px) {
+    .tops .top:nth-child(2) {
         display: none;
     }
-
+    
     .vertical-separator {
         display: none;
     }
+    .tops .top:first-child{
+        justify-content: space-between;
+        width: 60%;
+    }
 
-    
+    .tops .top:nth-child(3){
+        display: none;
+    }
+
+    .aviao {
+        display: block;
+        justify-content: center;
+        align-items: center;
+                
+    }
+
+    .aviao img {
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+    }
 }

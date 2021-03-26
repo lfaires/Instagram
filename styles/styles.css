@@ -188,6 +188,7 @@ span {
     align-items: center;
     border-radius: 3px;
     overflow: hidden;
+
 }
 
 .storie img {
@@ -210,7 +211,6 @@ span {
 .stories > img {
     position: absolute  ;
     z-index: 2;
-    margin-right: 5px;
     right: 0;
 }
 
@@ -272,12 +272,9 @@ span {
     width: 17px;
     height: 17px;
     margin-right: 10px;
+  
 }
 
-.posts .post div:nth-child(4) {
-    margin-left: 15px;
-    align-items: center;
-}
 
 .posts .post div:nth-child(4) img {
     width: 20px;
@@ -285,6 +282,7 @@ span {
     margin-top: 10px;
     border-radius: 50%;
 }
+
 
 /*---------- Breakpoint 935px ---------------*/
 @media (max-width:935px) {
@@ -306,14 +304,6 @@ span {
 /*----------- Breakpoint 614px --------------*/
 @media (max-width:614px) {
  
-    .container-left {
-        width: 100vw;
-    }
-    
-    .stories > div {
-        width: 100vw;
-    }
-    
     .tops .top:nth-child(2), .tops .top:nth-child(3), .vertical-separator {
         display: none;
     }
@@ -327,5 +317,35 @@ span {
         display: block;
     }
    
+    .posts, .stories{
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .stories div:last-child{
+        display: none;
+    }
+
+    .stories div:nth-of-type(8){
+        display: none;
+    }
+}
+
+@media (max-width:430px) {
+    .tops {
+        width: 100vw;
+    }
+    .stories div:nth-of-type(7), .stories div:nth-of-type(6) {
+        display: none;
+    }
+}
+
+@media (max-width:330px) {
+    .tops {
+        width: 100vw;
+    }
+    .stories div:nth-of-type(5){
+        display: none;
+    }
 }

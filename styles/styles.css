@@ -2,25 +2,60 @@ body {
     font-family: helvetica;
     background: #FAFAFA;
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/*------------- TOPO ---------------*/
+/*----------CORES E TAMANHO DE FONTES---------------*/
+
+.C34 {
+    color: #343434;
+}
+.C9B {
+    color: #9B9B9B;
+}
+
+.C27 {
+    color: #27A6FB;
+}
+
+.S22 {
+    font-size: 22px;
+}
+
+.S14 {
+    font-size:14px;
+}
+
+.S12 {
+    font-size: 12px;
+}
+
+.S10 {
+    font-size: 10px;
+}
+
+
+/*------------------------ TOPO ----------------------------------------------*/
 
 .tops {
-    background: rgba(255,255,255,0.97);
-    display: flex;
+    width: 100%;
     position: fixed;
     top:0;
-    left:215.5px;
+    left:0;
+    background: #FFFFFFFF;
+    z-index: 3;
+}
+
+.tops > div {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 935px;
     height: 54px;
     margin: 0 auto;
-}
-
-.aviao {
-    display: none;
 }
 
 .top {
@@ -29,22 +64,13 @@ body {
     justify-content: center;
 }
 
-.tops .top:nth-child(1) img:nth-child(1) {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.vertical-separator {
-    width: 1px;
-    height: 22px;
-    background: #DBDBDB;
-    margin-right: 10px;
-}
-
 .logo-desktop {
     width: 120px;
     height: 34px;
+}
+
+.paperplane {
+    display: none;
 }
 
 .tops .top:nth-child(2) {
@@ -54,13 +80,11 @@ body {
     width: 215px;  
 }
 
-.tops .top:nth-child(3) img {
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
+.icon {
+    margin-right: 15px;
 }
 
-/*------------- SEPARADORES ---------------*/
+/*----------------------------------- SEPARADORES ----------------------------------------*/
 
 .horizontal-separator {
     margin-top: 54px;
@@ -69,80 +93,101 @@ body {
     background: #DBDBDB;
     position: fixed;
     top:0;
-    left: 0;
-    
-   
+    left: 0; 
+    z-index: 3; 
 }
 
 .vertical-separator {
     width: 1px;
     height: 22px;
     background: #DBDBDB;
+    margin-left: 10px;
     margin-right: 10px;
 }
-/*-----------CONTAINER--------------------*/
+/*-----------------------------------CONTAINER-------------------------------------------------*/
 
 .container {
     display: flex;
+    justify-content: space-between;
+    width: 935px; 
+    margin-top: 88px;
+    position: relative;   
 }
 
 .container-right {
-    width: 273px;
-    margin-top: 88px;
-    margin-left: 28px;
+    width: 273px; 
+    position: absolute;
+    top:0; 
+    right: 0;
 }
 
+.container-left {
+    width:614px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+/*------------------------------------SIDE BAR -------------------------------------------------------*/
 .side-bar {
-    
+    margin-top: 25px;
 }
 
-.side-bar-top {
-    margin-top: 32px;
+.bar-top {
     display: flex;
 }
 
-.side-bar-top p {
-    margin: 15px 0px 0px 10px
+.bar-top p {
+    margin-left:10px
 }
 
-.side-bar-top img{
+.bar-top img{
     width: 56px;
     height: 56px;
     border-radius: 28px;
 }
 
-.side-bar-body {
-    margin-top: 35px;
-}
-.side-bar-body div{
+.bar-middle {
     display: flex;
-    margin-top: 10px;
-
+    justify-content: space-between;
+    margin-top: 13px;
 }
 
-.side-bar-body img {
+.bar-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar-body > div {
+    display: flex;
+    align-items: center;
+}
+
+.bar-body img {
     width: 32px;
     height: 32px;
     border-radius: 28px;
 }
 
-p {
-    font-size: 10px;
+.follow {
+    margin-left: 10px;
 }
-/*-------------- Stories ------------------- */
 
+span {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+/*--------------------------------------------- STORIES ------------------------------------------------------- */
 .stories {
-    width: 614px;
     height:118px;
-    margin-top: 88px;
-    margin-left: 215.5px;
     border: 1px solid #DBDBDB;
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 3px;
     overflow: hidden;
-   
 }
 
 .storie img {
@@ -157,24 +202,24 @@ p {
 .storie {
     width: 66px;
     height: 66px;
-    margin-left: 10px;
     text-align: center;
     background-image: url(/images/stories_background.jpg);
     background-size: cover;  
-    border-radius: 33%;
+}
+
+.stories > img {
+    position: absolute  ;
+    z-index: 2;
+    margin-right: 5px;
+    right: 0;
 }
 
 
-.photo {
-    margin-top: 30px;
-}
-
-/*------------ Posts -----------------*/
+/*--------------------------------------- POSTS-----------------------------------------------------*/
 .posts {
     width: 614px;
     height: 749px;
-    margin-left: 215.5px;
-    margin-top: 30px;
+    margin-top: 20px;
    
 }
 
@@ -196,8 +241,6 @@ p {
    margin: 10px 10px 10px 15px;
 }
 
-
-
 .posts .post .post-top div:first-child {
     display: flex;
     justify-content: center;
@@ -205,11 +248,9 @@ p {
     margin-right: 25px;
 }
 
-
 .post-top p {
     margin-left: 10px;
 }
-
 
 .post-bottom {
     margin: 10px 15px 0 15px;
@@ -241,78 +282,50 @@ p {
 .posts .post div:nth-child(4) img {
     width: 20px;
     height: 20px;
+    margin-top: 10px;
     border-radius: 50%;
-}
-
-/*---------- SIDE BAR ---------------------*/
-
-span {
-    
-    display: inline-block;
-    margin-left: 5px;
 }
 
 /*---------- Breakpoint 935px ---------------*/
 @media (max-width:935px) {
-    .tops {
-        left: 0;
-       width: 100%;
-    }
+   .tops > div {
+       width: 100vw;
+   }
 
-    .tops .top:first-child{
-        margin-left: 15px;
-    }
-
-  
-    .container {
-        margin-left:auto;
-        margin-right: auto;
-    }
     .container-right {
-        display: none;
-      
-    }
+       display: none;
+        width: 0vw;
+   }
 
-    .container-left {
-        width: 100%;
-       
-    }
-
-    .tops .top:nth-child(3) img {
-        margin-right: 15px;
-    }
-
+   .container {
+       width: 614px;
+   }
+   
 }
-
 
 /*----------- Breakpoint 614px --------------*/
 @media (max-width:614px) {
-    .tops .top:nth-child(2) {
-        display: none;
+ 
+    .container-left {
+        width: 100vw;
     }
     
-    .vertical-separator {
+    .stories > div {
+        width: 100vw;
+    }
+    
+    .tops .top:nth-child(2), .tops .top:nth-child(3), .vertical-separator {
         display: none;
     }
+
     .tops .top:first-child{
         justify-content: space-between;
-        width: 60%;
+        width: 100%;
     }
 
-    .tops .top:nth-child(3){
-        display: none;
-    }
-
-    .aviao {
+    .paperplane {
         display: block;
-        justify-content: center;
-        align-items: center;
-                
     }
+   
 
-    .aviao img {
-        width: 20px;
-        height: 20px;
-        margin-right: 15px;
-    }
 }

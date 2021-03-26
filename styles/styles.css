@@ -204,7 +204,7 @@ span {
     width: 66px;
     height: 66px;
     text-align: center;
-    background-image: url(/images/stories_background.jpg);
+    background-image: url(../images/stories_background.jpg);
     background-size: cover;  
 }
 

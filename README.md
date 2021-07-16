@@ -6,7 +6,7 @@
 
 ### ✅ Requisitos
 
-* Aplicar o layout seguindo a imagem fornecida neste link https://www.figma.com/file/rrweaBwWqOc9pAzk288mKB/Projeto-Instagram?node-id=0%3A1
+* Aplicar o layout seguindo a imagem fornecida no figma [aqui](https://www.figma.com/file/rrweaBwWqOc9pAzk288mKB/Projeto-Instagram?node-id=0%3A1)
 * Utilize a fonte **Open Sans** na página. Como não é uma fonte padrão nos computadores, você terá que importá-la na página. Para isso, pesquise sobre como importar fontes usando o [Google Fonts](https://fonts.google.com/) e utilize na sua página.
 * Ao passar o mouse sobre o texto de um link, este deve ficar ligeiramente mais claro. Dica: pesquise por **filter brightness** para criar esse efeito.
 * Todas as notícias devem ser links. Não é necessário colocar links para as notícias reais, pode ser um link fake (ex: https://globo.com).

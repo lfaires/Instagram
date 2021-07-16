@@ -2,7 +2,7 @@
 
 ## Recriar o feed de usuário do Instagram
 
-![Badge](https://img.shields.io/github/license/lfaires/Projeto001-globo.com)
+![Badge](https://img.shields.io/github/license/lfaires/Instagram)
 
 ### ✅ Requisitos
 
@@ -24,7 +24,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Deploy:
 
-https://lfaires.github.io/Globo.com/
+https://lfaires.github.io/Instagram/
 
 
 
